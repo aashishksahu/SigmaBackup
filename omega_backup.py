@@ -38,12 +38,12 @@ def check_args(argv):
 
 def check_dir_exists(path):
   if not os.path.isdir(path):
-    log("Folder not found", "E")
+    log(path + " not found", "E")
 
 
 def check_file_exists(path):
   if not os.path.isfile(path):
-    log("File not found", "E")
+    log(path + " not found", "E")
 
 
 def create_backup(path):
