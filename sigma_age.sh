@@ -13,7 +13,7 @@ if [ "$OPTION" != "-c" ] && [ "$OPTION" != "-r" ]; then
     echo "     $0 -c /path/to/directory"
     echo ""
     echo " To restore from a backup"
-    echo "     $0 -r /path/to/file.tar.g"
+    echo "     $0 -r /path/to/file.tar.age"
     exit 1
 fi
 
@@ -25,7 +25,7 @@ if [ -z "$SELECTED_ITEM" ]; then
     echo "     $0 -c /path/to/directory"
     echo ""
     echo " To restore from a backup"
-    echo "     $0 -r /path/to/file.tar.g"
+    echo "     $0 -r /path/to/file.tar.age"
     exit 1
 fi
 
