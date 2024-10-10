@@ -50,7 +50,7 @@ case "$OPTION" in
             
             echo "[INFO] Encrypting tarball.."
             
-            gpg --no-symkey-cache --verbose -o "$TAR_FILE.gpg" --s2k-mode 3 --s2k-digest-algo SHA512 --symmetric --s2k-cipher-algo AES256 "$TAR_FILE"
+            gpg --no-symkey-cache --verbose -o "$TAR_FILE.gpg" --s2k-mode 3 --s2k-count 65011712 --s2k-digest-algo SHA512 --symmetric --s2k-cipher-algo AES256 "$TAR_FILE"
             
             if [ $? -eq 0 ]; then
             	echo "[INFO] Successfully created backup!"
