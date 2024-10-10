@@ -12,7 +12,7 @@ def print_usage():
     print("     python script.py -c /path/to/directory")
     print("")
     print(" To restore from a backup")
-    print("     python script.py -r /path/to/file.tar.g")
+    print("     python script.py -r /path/to/file.tar.gpg")
 
 
 def readSalt() -> bytes:
@@ -80,7 +80,7 @@ def deriveKey():
 
 
 def encryptFile(tarFile):
-    gpg_output_file = f"{tarFile}.g"
+    gpg_output_file = f"{tarFile}.gpg"
 
     key = deriveKey()
 

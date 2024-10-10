@@ -50,8 +50,8 @@ case "$OPTION" in
             
             echo "[INFO] Encrypting tarball.."
             
-            gpg --no-symkey-cache --verbose -o "$TAR_FILE.g" --s2k-mode 3 --s2k-digest-algo SHA512 --symmetric --s2k-cipher-algo AES256 "$TAR_FILE"
-            
+            age -p "$TAR_FILE" > "$TAR_FILE.age"
+
             if [ $? -eq 0 ]; then
             	echo "[INFO] Successfully created backup!"
             else
@@ -78,8 +78,8 @@ case "$OPTION" in
 
         echo "[INFO] Decrypting backup..."
 	
-	gpg -o "$TAR_FILE" --decrypt "$SELECTED_ITEM"
-	
+	age -d "$SELECTED_ITEM" > "$TAR_FILE"
+
 	if [ $? -eq 0 ]; then
 	    echo "[INFO] Extracting from tarball"
 	    
