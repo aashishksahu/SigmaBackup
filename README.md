@@ -9,15 +9,6 @@ To restore from a backup
     sigma_backup.sh -r /path/to/file.tar.gpg"
 ```
 
-## sigma_scrypt.py
-Uses Scrypt KDF to derive a key and use that key to encrypt files using GPG with AES-256-CFB symmetric encryption
-```
-To create a backup from a directory
-    python sigma_scrypt.py -c /path/to/directory"
-To restore from a backup
-    python sigma_scrypt.py -r /path/to/file.tar.gpg"
-```
-
 ## sigma_age.sh
 Uses [Age](https://github.com/FiloSottile/age) to encrypt files
 
@@ -27,4 +18,14 @@ To create a backup from a directory
     sigma_age.sh -c /path/to/directory"
 To restore from a backup
     sigma_age.sh -r /path/to/file.tar.age"
+```
+
+
+## page.ps1
+Powershell alternative for sigma_age.sh
+```
+To create a backup from a directory
+    page.ps1 -c /path/to/directory"
+To restore from a backup
+    page.ps1 -r /path/to/file.tar.age"
 ```
